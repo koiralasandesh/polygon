@@ -1,13 +1,17 @@
 #include "polygon.h"
 
 int Polygon::get_sides(){
-    return sides;
+    return _sides;
 }
 double Polygon::get_perimeter(){
-    return perimeter;
+    return _perimeter;
 }
 
-void Polygon::add_side (double x){
-    perimeter=perimeter+x;
-    sides++;
+void Polygon::add_side (double length){
+    _perimeter=_perimeter+length;
+    _sides++;
+}
+double Polygon::get_area(double apothem){
+    _area= 0.5*apothem*_perimeter;
+    return _area;
 }
